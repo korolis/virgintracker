@@ -20,7 +20,7 @@ var playerlist = ['Xatoj', 'Laizy', 'Sizze', 'Nìna','Clummsy'];
     async function retrievePlayer(player) 
     {
 
-        await $.get("http://127.0.0.1:8080/player?name=" + player, async function (data, status){
+        await $.get("http://dredgetracker.herokuapp.com:5000/player?name=" + player, async function (data, status){
           
             if (Object.keys(data).length === 0)
             {
