@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+<body  style = "background-image: url('https://cdn.discordapp.com/attachments/643541990625247238/771830245556355092/dredgefondo.png'); background-size:cover;background-repeat: no-repeat;background-position-y: -0%;max-height:200%">
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src = "scripts/script.js"></script>
+
+<style>
+
+.playertable {
+  width: 1010px; 
+  margin: auto; 
+}
+
+.container {
+  margin-bottom: 5px;
+  font-family: helvetica;
+}
+
+.imgdiv {
+  width: 84px;
+  height: 84px;
+  position:relative;
+}
+
+.avatar {
+    max-height: 100%;
+    max-width: 100%;
+    width: 72px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+</style>
+
+
+<div>
+  <div class = "playertable" id = "input" style = "margin-top: 300px; height: 50px">
+    <form>
+      <input id = "playerinput"  type="text" placeholder="Nickname" style="width: 300px; height: 40px; font-family: Helvetica; font-size: 20px; padding-left:10px;vertical-align:middle;">
+      <input id = "submitplayer" type="button" onclick="play()" value="Add player" style="width: 150px; height: 46px; font-family: Helvetica; font-size: 20px; vertical-align:middle; align-content:center"><br><a id="error" style = "color: red; padding:0;size: 10px"></a>
+    </form>
+  </div>
+</div>
+<div style = "border-style:solid;width: 1100px; margin:auto; background-color:rgba(51, 51, 99, 0.80); margin-top: 20px;padding-bottom: 15px;padding-top: 1px">
+    <div class = "playertable" id = "onlineplayers"  style = "margin-bottom: 30px;"></div>
+    <div class = "playertable" id = "offlineplayers" style = "margin-top: 0px; margin-bottom:30px;"></div>
+</div>
+</body>
+</html> 

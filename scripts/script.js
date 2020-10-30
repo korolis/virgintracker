@@ -19,7 +19,6 @@ var playerlist = ['Xatoj', 'Laizy', 'Sizze', 'Nìna','Clummsy'];
 
     async function retrievePlayer(player) 
     {
-      //playerStats = [];
 
         await $.get("http://127.0.0.1:8080/player?name=" + player, async function (data, status){
           
@@ -58,7 +57,6 @@ var playerlist = ['Xatoj', 'Laizy', 'Sizze', 'Nìna','Clummsy'];
        $("#onlineplayers").text(onlinehtml);
        $("#offlineplayers").text(offlinehtml);
 
-      //console.log(playerStats);
 
       for (const player in playerStats)
       {
@@ -210,6 +208,9 @@ var playerlist = ['Xatoj', 'Laizy', 'Sizze', 'Nìna','Clummsy'];
 
     $(document).ready(async function()
     {
+
+
+      $('body').html();
       var draudio = await document.getElementById("draudio");
 
 
@@ -226,7 +227,7 @@ var playerlist = ['Xatoj', 'Laizy', 'Sizze', 'Nìna','Clummsy'];
 
 
 
-      $("#submitplayer").click(async function()
+      $('body').on('click', '#submitplayer', async function()
         { 
           if ($("#playerinput").val() != '') 
           {
